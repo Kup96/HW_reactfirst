@@ -1,0 +1,59 @@
+$main-color: rgb(155, 155, 155);
+$color-for-main: black;
+$color-of-counts: rgb(93, 42, 120);
+$font-of-counts: Helvetica, sans-serif;
+$color-of-card: rgb(150, 222, 231);
+
+#root {
+    background-color: $color-of-card;
+    width: 380px;
+    height: 250px;
+    margin-left: 450px;
+    margin-top: 50px;
+    img{
+        width: 380px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .PlusButton{
+        position: relative;
+        bottom: 110px;
+        background-image: url("./components/172525_plus_icon.png");
+        background-repeat: no-repeat;
+        background-position: 0px 0px; 
+        border: none;
+        cursor: pointer;
+        height: 64px;
+        width: 64px;
+        margin-left: 158px;
+
+    }
+
+}
+body{
+    background-color: $main-color;
+}
+.NameInfo{
+    position: relative;
+    bottom: 125px;
+    left: 120px;
+    font-size: larger;
+    color: black;
+}
+
+@mixin display(){
+    display: flex;
+    justify-content: space-around;
+}
+.CountInfo{
+    @include display();
+    margin-top: -75px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.TagInfo{@include display();
+    margin-bottom: 10px;
+    flex-direction: column;
+    p{
+        color: $color-of-counts;
+    }
+}
